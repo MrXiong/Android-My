@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.recycler.zx.zxrecyclerview">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".Buy.base.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FirstActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- @android:style/Theme.NoTitleBar.Fullscreen 代表没tilebar并且全屏 -->
+        <!-- landscape 横屏 portrait竖屏 -->
+        <activity
+            android:name=".TimeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity android:name=".loadmore.MoreActivity" />
+        <activity android:name=".expandable.ExpandableActivity" />
+        <activity android:name=".ImageSwitcher.ImageSwitcherActivity" />
+        <activity
+            android:name=".TextSwitcherActivity"
+            android:configChanges="keyboard|screenSize|orientation" />
+        <activity android:name=".ViewFlipperActivity" />
+        <activity
+            android:name=".MenuActivity"
+            android:parentActivityName=".ActionBar.MyActionBarActivity"
+            android:screenOrientation="landscape">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActionBar.MyActionBarActivity" />
+        </activity>
+        <activity android:name=".ViewPagerActivity" />
+        <activity
+            android:name=".NotificationActivity"
+            android:theme="@style/myappTheme" />
+        <activity android:name=".SharePreferenceActivity" />
+        <activity android:name=".Service.ServiceActivity" />
+
+        <!--
+            android:enabled="true"有效的，可用的
+            android:exported="true"对外开放
+        -->
+        <service
+            android:name=".Service.MyService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.MyIntentService"
+            android:exported="false" />
+        <service
+            android:name=".Service.MyBoundService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".Service.MessageService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".BroadcastReceiver.BroadcastActivity" />
+
+        <receiver
+            android:name=".BroadcastReceiver.MyReceiver1"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.broad1" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.OrderReceiver"
+            android:enabled="true"
+            android:exported="true">
+
+            <!-- android:priority="100" 优先级是-1000到1000  越大优先级越高 -->
+            <intent-filter android:priority="200">
+                <action android:name="com.order" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.OrderReceiver2"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter android:priority="100">
+                <action android:name="com.order" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.StickyReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".BroadcastReceiver.SystemBroadcast.StartupReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.SystemBroadcast.InternetReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.SystemBroadcast.ElectricquantityReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".BroadcastReceiver.SystemBroadcast.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".fragments.FragmentsActivity" />
+        <activity android:name=".fragments.FragmentsCodeActivity" />
+        <activity android:name=".fragments.PopBackTaskActivity" />
+        <activity android:name=".fragments.fragmentAndActivity.FramentAndActivity" />
+        <activity
+            android:name=".ActionBar.MyActionBarActivity"
+            android:uiOptions="splitActionBarWhenNarrow" />
+        <activity android:name=".Buy.BuyActivity" />
+        <activity android:name=".Handler.MemoryOverflowActivity" />
+        <activity android:name=".FileAndJsonPaser.FileActivity" />
+        <activity android:name=".volleyAndAsyncAndWebservice.WebServiceActivity"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.recycler.zx.zxrecyclerview.MainActivity" >
+    <!-- showAsAction 3.0以后使用-->
+    <item android:id="@+id/red"
+        android:title="红色"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom|withText"
+         />
+    <item android:id="@+id/blue"
+        android:title="蓝色"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:orderInCategory="200"
+         />
+    <item android:id="@+id/yellow"
+        android:title="搜索"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        android:orderInCategory="300"
+         />
+    <!--collapseActionView这个属性代表组件替换（不如搜索按钮点击之后替换成搜索框）-->
+    <item android:id="@+id/share"
+        android:title="分享"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="ifRoom"
+        android:orderInCategory="400"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"
+         />
+</menu>

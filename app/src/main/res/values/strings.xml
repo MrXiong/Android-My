@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ZxRecyclerView</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="city">
+        <item>北京</item>
+        <item>上海</item>
+        <item>关注</item>
+        <item>杭州</item>
+    </string-array>
+</resources>

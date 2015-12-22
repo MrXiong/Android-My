@@ -1,0 +1,12 @@
+<Persons>
+    <Person personId="11">
+        <name>张飞</name>
+        <sex>男</sex>
+        <age>30</age>
+    </Person>
+    <Person personId="22">
+        <name>关于</name>
+        <sex>女</sex>
+        <age>22</age>
+    </Person>
+</Persons>

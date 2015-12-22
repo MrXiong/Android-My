@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="声音设置">
+
+        <CheckBoxPreference
+            android:key="checkbox_preference"
+            android:title="是否打开声音"
+            android:summary="打开声音后可以自动开启音乐" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="城市">
+
+        <EditTextPreference
+            android:key="edittext_preference"
+            android:title="昵称"
+            android:summary="请输入昵称："
+            android:dialogTitle="昵称哇：" />
+
+        <ListPreference
+            android:key="list_preference"
+            android:title="城市名称"
+            android:summary="请选择城市"
+            android:entries="@array/city"
+            android:entryValues="@array/city"
+            android:dialogTitle="城市名称哇：" />
+        <PreferenceScreen
+            android:title="百度"
+            android:summary="访问">
+
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com" />
+
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

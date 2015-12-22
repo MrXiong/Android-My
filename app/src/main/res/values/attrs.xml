@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="myview">
+        <!--format代表类型，比如：int ，String， color ，dimension（尺寸） -->
+        <attr name="textColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="text" format="string"></attr>
+    </declare-styleable>
+
+
+</resources>
